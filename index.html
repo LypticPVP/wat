@@ -1,10 +1,61 @@
-<html><body>
-Hi<br>
-aman woz herew
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matt Oakly</title>
+	 <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	body{
+		margin: 0;
+		padding: 0;
 
+	}
+	#wrap{
+		font-family: 'Lobster', sans-serif;
+		text-align: center;
+		background-color: #123abc;
+		height: 500px;
+		padding-top: 200px;
+		background-image: url('http://i.imgur.com/kDQY3T1.png');
+	}
+	#title{
+		font-size: 700%;
+		color: white;
 
+	}
+	#content{
+		text-align:center;
+	}
+	#github{
+		font-family:sans-serif;
+	}
 
-
-
-
-</body></html>
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<img id="title" src="http://i.imgur.com/1ggDK8F.png"></img>
+	</div>
+	
+	<div id="content" >
+		
+		<br>
+		<script src="http://coinwidget.com/widget/coin.js"></script>
+		<br>
+		
+<script>
+CoinWidgetCom.go({
+	wallet_address: "1LbsqMz3TZzxbZTeFE3VaNzsXrSdaosdQM"
+	, currency: "bitcoin"
+	, counter: "count"
+	, alignment: "bl"
+	, qrcode: true
+	, auto_show: false
+	, lbl_button: "Donate"
+	, lbl_address: "My Bitcoin Address:"
+	, lbl_count: "donations"
+	, lbl_amount: "BTC"
+});
+</script>
+	</div>
+</body>
+</html>
