@@ -24,6 +24,7 @@
 		color: white;
 		height:10%;
 		width: 800px;
+		padding-bottom: 500px;
 	}
 	#content{
 		text-align:center;
@@ -43,12 +44,26 @@
     z-index: -5;
 		
 	}
+	#caret {
+    position: absolute;
+    width: 48px;
+    height: 15px;
+    background: url('https://www.snapchat.com/static/style-guide/home/images/caret.svg') no-repeat center center;
+    background-size: 48px 15px;
+    bottom: 48px;
+    left: 50%;
+    margin-left: -34px;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: content-box;
+    
+	}
 	</style>
 </head>
 <body>
 	<div id="particles-js"></div>
 	<script src="particles.js"></script>
-	<script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
 	<script type="text/javascript">
 particlesJS.load('particles-js', 'config.json', function() {
   console.log('callback - particles.js config loaded');
@@ -56,12 +71,14 @@ particlesJS.load('particles-js', 'config.json', function() {
 	</script>
 	<div id="wrap">
 		<img id="title" src="http://i.imgur.com/1ggDK8F.png"></img>
+		
+		<div id="caret"></div>
 	</div>
 	
 	<div id="content" >
 		
 		<br>
-		<iframe src="https://docs.google.com/forms/d/1LVjSCnMnApyTuEPotDJa9VIxnfoqMJVLUjOsQhInX80/viewform?embedded=true" width="760" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+		<iframe id="scroll" src="https://docs.google.com/forms/d/1LVjSCnMnApyTuEPotDJa9VIxnfoqMJVLUjOsQhInX80/viewform?embedded=true" width="760" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 		<br>
 		<br>
 		<script src="http://coinwidget.com/widget/coin.js"></script>
@@ -81,6 +98,10 @@ CoinWidgetCom.go({
 	, lbl_address: "My Bitcoin Address:"
 	, lbl_count: "donations"
 	, lbl_amount: "BTC"
+});
+
+$( "#caret" ).click(function() {
+  $(window).scrollTo($("#scroll"), {duration:1000});
 });
 </script>
 
